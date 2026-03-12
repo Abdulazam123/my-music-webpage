@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Favorite Music Webpage</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+text-align:center;
+background: linear-gradient(to right,#dbeafe,#bfdbfe);
+margin:0;
+padding:0;
+}
+
+h1{
+color:#1e3a8a;
+margin-top:40px;
+}
+
+p{
+font-size:18px;
+color:#1e3a8a;
+}
+
+iframe{
+margin-top:20px;
+border-radius:10px;
+}
+
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px 20px;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+#box{
+width:100px;
+height:100px;
+background:red;
+position:relative;
+margin:30px auto;
+border-radius:10px;
+}
+
+footer{
+margin-top:40px;
+font-size:16px;
+color:#1e3a8a;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>My Favorite Music Webpage</h1>
+
+<p>This webpage includes HTML, CSS, an embedded YouTube music video, and a JavaScript animation.</p>
+
+<h2>Embedded YouTube Music Video</h2>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
+allowfullscreen>
+</iframe>
+
+<h2>JavaScript Animation</h2>
+
+<p>Click the button below to start the animation</p>
+
+<button onclick="moveBox()">Start Animation</button>
+
+<div id="box"></div>
+
+<footer>
+Created by: Abdul Azam
+</footer>
+
+<script>
+
+function moveBox(){
+
+let box=document.getElementById("box");
+let position=0;
+
+let animation=setInterval(frame,10);
+
+function frame(){
+
+if(position>=300){
+clearInterval(animation);
+}
+else{
+position++;
+box.style.left=position+"px";
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
